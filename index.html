@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue App</title>
+    <!-- Includi Vue.js -->
+    <script src="https://unpkg.com/vue@3.3.8/dist/vue.global.js"></script>
+    <!-- Includi Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <h1>Lista di indirizzi email generati</h1>
+    <button @click="getMails(10)">Genera 10 indirizzi email</button>
+    <ul>
+        <li v-for="email in emailList" :key="email">{{ email }}</li>
+    </ul>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
